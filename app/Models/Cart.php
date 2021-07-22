@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    use HasFactory;
+		protected $guarded = [];
+
+		public function product()
+		{
+			// M -> 1
+			return $this->belongsTo(Product::class,'product_id');
+		}
 }

@@ -16,10 +16,16 @@ class User extends Authenticatable
      *
      * @var array
      */
+		/** Field yang akan dilindungi (Tidak boleh sembarangan diisi) */
+		// protected $guarded = [];
+
+		/** Field yang boleh diisi sama user */
     protected $fillable = [
         'name',
         'email',
         'password',
+				'phone',
+				'address'
     ];
 
     /**
@@ -40,4 +46,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+		/**
+		 * yyyy-mm-dd HH:ii:ss
+		 * 2021-07-07 09:30:29.000Z
+		 * 
+		 * 07 / 07 / 2021 09:30
+		 */
 }

@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
 	public function run()
 	{
 		Product::updateOrCreate([
-			'user_id'	=> 1,
+			'user_id'	=> 3,
 			'name'		=> 'Samsung A5000'
 		], [
 			'description'	=> 'Hp Samsung',
@@ -25,7 +25,7 @@ class ProductSeeder extends Seeder
 		]);
 
 		Product::updateOrCreate([
-			'user_id'	=> 1,
+			'user_id'	=> 3,
 			'name'		=> 'Ipad T1000'
 		], [
 			'description'	=> 'Tablet Apple',
@@ -34,19 +34,19 @@ class ProductSeeder extends Seeder
 		]);
 
 		Product::updateOrCreate([
-			'user_id'	=> 2,
-			'name'		=> 'Ipad T1000'
+			'user_id'	=> 3,
+			'name'		=> 'Sony Experia Mark 3'
 		], [
-			'description'	=> 'Tablet Apple',
+			'description'	=> '',
 			'stok'				=> 7,
 			'price'				=> '10000000'
 		]);
 
-		Barang::updateOrCreate([
-			'user_id'	=> 2,
-			'name'		=> 'Ipad T1000'
+		Product::updateOrCreate([
+			'user_id'	=> 3,
+			'name'		=> 'Samsung A71'
 		], [
-			'description'	=> 'Tablet Apple',
+			'description'	=> '',
 			'stok'				=> 7,
 			'price'				=> '10000000'
 		]);
